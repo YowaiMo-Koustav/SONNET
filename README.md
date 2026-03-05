@@ -1,48 +1,45 @@
 
 # Sonnet – Smart Scheme & Job Informer
 
-[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
-[![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)](https://aws.amazon.com/)
-[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Stacks](https://skillicons.dev/icons?i=js,html,css,react,vite,tensorflow,aws,postgres,supabase,python)](https://skillicons.dev)
 
 Sonnet is an AI-powered scholarship and scheme discovery web app that helps students and individuals quickly find, understand, and track opportunities they are actually eligible for.[file:1]  
-It is being built for the **AI for Bharat** hackathon under the **AI for Communities, Access & Public Impact** problem track.[file:1]
+It is being built for the **AI for Bharat** hackathon under the **AI for Communities, Access & Public Impact** problem track.
 
 ---
 
 ## ✨ Problem & Motivation
 
 Across India there are thousands of scholarships, government schemes, CSR/DGO programs, institute-specific schemes, and local opportunities, but most people never hear about the ones that apply to them.[file:1]  
-Information is scattered across PDFs, brochures, websites, and notice boards, leading to missed financial support and lost opportunities.[file:1]
+Information is scattered across PDFs, brochures, websites, and notice boards, leading to missed financial support and lost opportunities.
 
 Sonnet tackles this by:
 
-- Centralizing schemes from multiple sources (city/district → state → CSR/DGO → college → national).[file:1]  
-- Using AI to parse brochures and PDFs into clear, short explanations and checklists.[file:1]  
-- Matching users to relevant opportunities based on their profile and location.[file:1]  
-- Letting users track their application progress in one place.[file:1]
+- Centralizing schemes from multiple sources (city/district → state → CSR/DGO → college → national).
+- Using AI to parse brochures and PDFs into clear, short explanations and checklists.
+- Matching users to relevant opportunities based on their profile and location.
+- Letting users track their application progress in one place.
 
 ---
 
 ## 🎯 Core Features
 
 - **Location‑first discovery**  
-  Browse and search schemes starting from district/city, then state, CSR/DGO, institutional, and national levels, with locality-aware ranking.[file:1]
+  Browse and search schemes starting from district/city, then state, CSR/DGO, institutional, and national levels, with locality-aware ranking.
 
 - **AI brochure & PDF understanding**  
-  Ingest scholarship brochures and PDFs, extract key fields (eligibility, deadlines, required documents), and generate ~100‑word “crisp blog” summaries.[file:1]
+  Ingest scholarship brochures and PDFs, extract key fields (eligibility, deadlines, required documents), and generate ~100‑word “crisp blog” summaries.
 
 - **Eligibility matching & scoring**  
-  Match user profiles (location, income, course, caste, etc.) against scheme criteria, compute a match/eligibility score, and rank opportunities accordingly.[file:1]
+  Match user profiles (location, income, course, caste, etc.) against scheme criteria, compute a match/eligibility score, and rank opportunities accordingly.
 
 - **Application tracking dashboard**  
-  Track the full lifecycle of each application (interested → in progress → submitted → under review → accepted/rejected) with a timeline-style UI.[file:1]
+  Track the full lifecycle of each application (interested → in progress → submitted → under review → accepted/rejected) with a timeline-style UI.
 
 - **Multi-language friendly UX**  
-  Designed to support Indian languages (English + regional), with a simple, mobile-first interface targeting rural and low-bandwidth users.[file:1]
-
+  Designed to support Indian languages (English + regional), with a simple, mobile-first interface targeting rural and low-bandwidth users.
 - **Hackathon-ready demo flow**  
-  Upload a real brochure, see AI extract information and generate a summary, then walk through the application tracking flow in a 2–3 minute demo.[file:1]
+  Upload a real brochure, see AI extract information and generate a summary, then walk through the application tracking flow in a 2–3 minute demo.
 
 ---
 
@@ -50,28 +47,26 @@ Sonnet tackles this by:
 
 ### Frontend (current MVP – Lovable.dev)
 
-- **Framework:** React + Vite + TypeScript (generated and iterated via [Lovable.dev](https://lovable.dev)).[file:1]  
-- **UI:** Tailwind CSS + component abstractions (cards, badges, modals, forms, toasts).*[file:1]*  
-- **App type:** Mobile‑first SPA/PWA, optimized for students on low‑end devices and networks.[file:1]  
-- **Deployment:** Vercel (via GitHub integration) – live URL used for hackathon demo.[file:1]
-
-*(Adjust this section to match your actual UI libs: e.g., add “shadcn/ui” if you’re using it.)*
+- **Framework:** React + Vite + TypeScript   
+- **UI:** Tailwind CSS + component abstractions (cards, badges, modals, forms, toasts). 
+- **App type:** Mobile‑first SPA/PWA, optimized for students on low‑end devices and networks.
+- **Deployment:** Vercel (via GitHub integration) – live URL used for hackathon demo.
 
 ### Backend (MVP runtime)
 
 - **Supabase** as the primary backend in the Lovable app:  
-  - PostgreSQL database for users, schemes, applications, and locations.[file:1]  
-  - Auth (email/OTP) and row‑level security for multi‑tenant data isolation.[file:1]  
-  - Storage and Edge Functions for any custom server logic.[file:1]
+  - PostgreSQL database for users, schemes, applications, and locations.
+  - Auth (email/OTP) and row‑level security for multi‑tenant data isolation.
+  - Storage and Edge Functions for any custom server logic.
 
 - **AI layer:**  
-  - **Google Gemini API** for: brochure summarization, eligibility explanation, and recommendation logic.[file:1]  
-  - **Firecrawl API** (optional) to crawl and normalize external scheme/job pages when needed.[file:1]
+  - **Google Gemini API** for: brochure summarization, eligibility explanation, and recommendation logic.
+  - **Firecrawl API** (optional) to crawl and normalize external scheme/job pages when needed.
 
 ### Spec‑driven Python backend (separate Kiro repo)
 
-In parallel, a spec‑first backend has been generated using **Kiro IDE** (AWS‑aligned, FastAPI + PostgreSQL) based on formal `requirements.md`, `design.md`, and `tasks.md` artifacts.[file:1]  
-This backend includes rich domain models, property‑based tests (Hypothesis), and REST API designs, and lives in a separate GitHub repository that can be referenced as the **“Kiro backend”** for the hackathon submission.[file:1]
+In parallel, a spec‑first backend has been generated using **Kiro IDE** (AWS‑aligned, FastAPI + PostgreSQL) based on formal `requirements.md`, `design.md`, and `tasks.md` artifacts.
+This backend includes rich domain models, property‑based tests (Hypothesis), and REST API designs, and lives in a separate GitHub repository that can be referenced as the **“Kiro backend”** for the hackathon submission.
 
 ---
 
@@ -79,14 +74,14 @@ This backend includes rich domain models, property‑based tests (Hypothesis), a
 
 **Current MVP path (what’s live):**
 
-- React/Vite frontend (Lovable) deployed to Vercel.[file:1]  
-- Frontend talks to Supabase (Postgres + Auth + Storage + Edge Functions) via environment-configured client.[file:1]  
-- Frontend/Edge Functions call Google Gemini for summarization, matching, and search semantics, and optionally Firecrawl for web extraction.[file:1]
+- React/Vite frontend (Lovable) deployed to Vercel.  
+- Frontend talks to Supabase (Postgres + Auth + Storage + Edge Functions) via environment-configured client.
+- Frontend/Edge Functions call Google Gemini for summarization, matching, and search semantics, and optionally Firecrawl for web extraction.
 
 **Planned / parallel path (Kiro-driven backend):**
 
-- Python FastAPI backend, PostgreSQL, and property‑based tests auto‑scaffolded/managed via Kiro (using the detailed `requirements.md`, `design.md`, and `tasks.md`).[file:1]  
-- This backend is currently not wired to the Lovable frontend, but can be evolved post‑hackathon as the production-grade core service.[file:1]
+- Python FastAPI backend, PostgreSQL, and property‑based tests auto‑scaffolded/managed via Kiro (using the detailed `requirements.md`, `design.md`, and `tasks.md`). 
+- This backend is currently not wired to the Lovable frontend, but can be evolved post‑hackathon as the production-grade core service.
 
 ---
 
@@ -94,29 +89,29 @@ This backend includes rich domain models, property‑based tests (Hypothesis), a
 
 - **Home / Discovery**  
   - Shows a prioritized feed of nearby opportunities based on the user’s location and profile.  
-  - Uses “location‑first” ordering: district/city → state → CSR/DGO → college → national.[file:1]
+  - Uses “location‑first” ordering: district/city → state → CSR/DGO → college → national.
 
 - **Location Browser**  
   - Breadcrumbed hierarchy: country → state → district.[file:1]  
-  - Search‑as‑you‑type + “use my location” shortcut for quick navigation (e.g., Ranchi-first testing).*[file:1]*
+  - Search‑as‑you‑type + “use my location” shortcut for quick navigation (e.g., Ranchi-first testing).
 
 - **Search**  
   - Full‑text and semantic search across schemes by name, description, and criteria.  
-  - Filters for location, scheme type, deadline range, education level, and “only eligible”.[file:1]
+  - Filters for location, scheme type, deadline range, education level, and “only eligible”.
 
 - **Scheme Detail**  
-  - Shows “crisp blog” summary, eligibility criteria, required documents checklist, deadlines, and source brochure link.[file:1]  
-  - If the user is logged in, shows a match percentage and explains which criteria passed/failed.[file:1]
+  - Shows “crisp blog” summary, eligibility criteria, required documents checklist, deadlines, and source brochure link.
+  - If the user is logged in, shows a match percentage and explains which criteria passed/failed.
 
 - **Profile & Matches**  
-  - Lets a user maintain their profile (location, income, course, caste, etc.).[file:1]  
-  - Fetches and displays ranked recommendations based on that profile.[file:1]
+  - Lets a user maintain their profile (location, income, course, caste, etc.).
+  - Fetches and displays ranked recommendations based on that profile.
 
 - **Applications Dashboard**  
-  - Central view of all applied/interested schemes with statuses and a simple timeline per application.[file:1]
+  - Central view of all applied/interested schemes with statuses and a simple timeline per application.
 
 - **Admin / Ingestion (MVP/simple)**  
-  - Minimal admin surface to upload new brochures, review extracted fields, and correct low‑confidence data.[file:1]
+  - Minimal admin surface to upload new brochures, review extracted fields, and correct low‑confidence data.
 
 ---
 
@@ -125,8 +120,8 @@ This backend includes rich domain models, property‑based tests (Hypothesis), a
 ### Prerequisites
 
 - Node.js 18+  
-- A Supabase project (URL + anon/public key)[file:1]  
-- Google Gemini API key (and Firecrawl key if you enable crawling)[file:1]
+- A Supabase project (URL + anon/public key)
+- Google Gemini API key
 
 ### 1. Clone the Repository
 
