@@ -3,14 +3,14 @@
 
 [![Stacks](https://skillicons.dev/icons?i=js,html,css,react,vite,tensorflow,aws,postgres,supabase,python)](https://skillicons.dev)
 
-Sonnet is an AI-powered scholarship and scheme discovery web app that helps students and individuals quickly find, understand, and track opportunities they are actually eligible for.[file:1]  
+Sonnet is an AI-powered scholarship and scheme discovery web app that helps students and individuals quickly find, understand, and track opportunities they are actually eligible for.
 It is being built for the **AI for Bharat** hackathon under the **AI for Communities, Access & Public Impact** problem track.
 
 ---
 
 ## ✨ Problem & Motivation
 
-Across India there are thousands of scholarships, government schemes, CSR/DGO programs, institute-specific schemes, and local opportunities, but most people never hear about the ones that apply to them.[file:1]  
+Across India there are thousands of scholarships, government schemes, CSR/DGO programs, institute-specific schemes, and local opportunities, but most people never hear about the ones that apply to them.
 Information is scattered across PDFs, brochures, websites, and notice boards, leading to missed financial support and lost opportunities.
 
 Sonnet tackles this by:
